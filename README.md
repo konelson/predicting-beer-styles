@@ -1,1 +1,1 @@
-# predicting-beer-styles
+# predicting_beer_styles
