@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beer Styles</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  .button {
+    background-color: DarkBlue;
+    border: none;
+    color: White;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #eee;
+    width: 300px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2>Enter in a beer recipe and I'll tell you what style of beer it is!</h2>
+
+  <form action="/predict_recipe/" method="post">
+
+    <div class="animal-card" align="center">
+
+      Size:
+      <br>
+        <input type="text" name="size">
+      <br>
+      
+      Original Gravity:
+      <br>
+        <input type="text" name="og">
+      <br>
+
+      Final Gravity:
+      <br>
+        <input type="text" name="fg">
+      <br>
+      
+      Alcohol by Volume:
+      <br>
+      	<input type="text" name="abv">
+      <br>
+
+      International Bitterness Units:
+      <br>
+        <input type="text" name="ibu">
+      <br>
+
+      Color:
+      <br>
+        <input type="text" name="color">
+      <br>
+      
+      Boil Size:
+      <br>
+        <input type="text" name="boilsize">
+      <br>
+      
+      Boil Time:
+      <br>
+        <input type="text" name="boiltime">
+      <br>
+
+      Boil Gravity:
+      <br>
+        <input type="text" name="boilgravity">
+      <br>
+
+      Efficiency:
+      <br>
+        <input type="text" name="efficiency">
+      <br>
+
+      All Grain (Yes / No):
+      <br>
+        <input type="text" name="allgrain">
+      <br>
+
+      BIAB (Yes / No):
+      <br>
+        <input type="text" name="biab">
+      <br>
+
+      Partial Mash (Yes / No):
+      <br>
+        <input type="text" name="partialmash">
+      <br>
+
+      Extract (Yes / No):
+      <br>
+        <input type="text" name="extract">
+      <br>
+
+    </div>
+
+  <br>
+
+  <button type="submit" class="button">
+    What is it?
+  </button>
+  </form>
+
+  <br>
+
+  {% if message %}
+  <h2>{{message}}</h2>
+  {% endif %}
+
+</body>
+</html>
