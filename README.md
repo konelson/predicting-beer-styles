@@ -15,4 +15,4 @@
 6.  beer_model_tuning_gradient_boosting
     - tunes parameters on gradient boosted decision tree model, visualizes output using graphviz
 7.  beer_ensembling
-    - combines random forest and gradien boosted decision trees using voting classifier to increase adjusted r-squared
+    - combines random forest and gradient boosted decision trees using voting classifier to increase adjusted r-squared
